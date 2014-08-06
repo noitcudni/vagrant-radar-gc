@@ -13,7 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     radar.vm.box = "ubuntu/trusty64"
     
     # Create a private network
-    radar.vm.network :private_network, ip: "192.168.1.2", virtualbox__intnet: "neverwinterDP"
+    radar.vm.network :private_network, ip: "192.168.1.2"
     radar.vm.hostname = "radar"
     
     #radar.vm.synced_folder  ".", "/vagrant", disabled: true
