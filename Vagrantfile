@@ -20,6 +20,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     
     #VirtualBox provider
     radar.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+      vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
       vb.name = "radar"
       vb.customize ["modifyvm", :id, "--memory", "1024"]
       # vb.customize ["modifyvm", :id, "--cpus", "2"]
